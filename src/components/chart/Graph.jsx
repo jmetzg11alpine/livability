@@ -10,10 +10,19 @@ const formatData = (data) => {
   return new_data
 }
 
-const Graph = ({ category, data, cityInfo, city }) => {
+const get_colors = (fit) => {
+  if (fit === 1) {
+    return ['#3d348b', '#009fb7']
+  } else {
+    return ['#ff4b3e', '#ffb20f']
+  }
+}
+
+const Graph = ({ category, data, cityInfo, city, fit }) => {
   data = formatData(data)
   let ReferenceD3 = city + category
   ReferenceD3 = useRef()
+  const [mainColor, secondColor] = get_colors(fit)
 
   useEffect(() => {
     const xMinValue = Math.min(...data)
@@ -69,7 +78,7 @@ const Graph = ({ category, data, cityInfo, city }) => {
       })
       .attr('r', 2)
       .attr('opacity', 0.85)
-      .attr('fill', '#009fb7')
+      .attr('fill', secondColor)
     svg
       .selectAll('point')
       .data([cityInfo[category]])
@@ -81,11 +90,12 @@ const Graph = ({ category, data, cityInfo, city }) => {
       .attr('cy', height / 2)
       .attr('r', 8)
       .attr('opacity', 0.7)
-      .attr('fill', '#3d348b')
-  }, [ReferenceD3, data, category, cityInfo])
+      .attr('fill', mainColor)
+  }, [ReferenceD3, data, category, cityInfo, fit])
 
   return (
     <div>
+      <p>fit: {fit}</p>
       <svg ref={ReferenceD3}></svg>
     </div>
   )

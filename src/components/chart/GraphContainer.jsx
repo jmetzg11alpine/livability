@@ -26,6 +26,7 @@ const GraphContainer = ({ city }) => {
             cityInfo={cityInfo}
             data={data}
             city={city}
+            fit={1}
           />
         </div>
         <div className='no_fit'>
@@ -35,6 +36,7 @@ const GraphContainer = ({ city }) => {
             cityInfo={cityInfo}
             data={data}
             city={city}
+            fit={0}
           />
         </div>
       </div>

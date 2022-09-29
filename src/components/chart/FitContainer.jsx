@@ -8,7 +8,7 @@ const get_cat_numbers = (cat, data) => {
   return numbers
 }
 
-const FitContainer = ({ categories, cityInfo, data, city }) => {
+const FitContainer = ({ categories, cityInfo, data, city, fit }) => {
   let category_data = []
   for (let i in categories) {
     let cat = categories[i]
@@ -29,6 +29,7 @@ const FitContainer = ({ categories, cityInfo, data, city }) => {
               data={data}
               cityInfo={cityInfo}
               city={city}
+              fit={fit}
             />
           </div>
         ))}
