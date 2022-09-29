@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/dirvers_of_livability/static/css/main.4fd7317f.css",
+    "main.js": "/dirvers_of_livability/static/js/main.b0948f57.js",
+    "static/media/cities.csv": "/dirvers_of_livability/static/media/cities.7593b9cb09a9fbc8dce4.csv",
+    "index.html": "/dirvers_of_livability/index.html",
+    "static/media/city_names_only.csv": "/dirvers_of_livability/static/media/city_names_only.2490ce402f703c4772c3.csv",
+    "static/media/stats.csv": "/dirvers_of_livability/static/media/stats.fcae1e29045ab9b9c705.csv",
+    "main.4fd7317f.css.map": "/dirvers_of_livability/static/css/main.4fd7317f.css.map",
+    "main.b0948f57.js.map": "/dirvers_of_livability/static/js/main.b0948f57.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4fd7317f.css",
+    "static/js/main.b0948f57.js"
+  ]
+}
