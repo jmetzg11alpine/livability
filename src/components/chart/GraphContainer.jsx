@@ -1,22 +1,26 @@
+import { useState } from 'react'
 import ChartPrepper from '../chartPrepper/ChartPrepper'
 import FitContainer from './FitContainer'
+import Selector from './Selector'
 import './styles.css'
 
-const GraphContainer = ({ city }) => {
+const GraphContainer = () => {
+  const [city, setCity] = useState('Phoenix')
+  const [options, setOptions] = useState([])
   let fit = null
   let no_fit = null
   let cityInfo = null
   let data = null
-  if (city) {
-    const bigObject = ChartPrepper(city)
-    fit = bigObject[0].category
-    no_fit = bigObject[1].category
-    cityInfo = bigObject[2]
-    data = bigObject[3]
-  }
+
+  const bigObject = ChartPrepper(city)
+  fit = bigObject[0].category
+  no_fit = bigObject[1].category
+  cityInfo = bigObject[2]
+  data = bigObject[3]
 
   return (
     <>
+      <Selector setCity={setCity} options={options} setOptions={setOptions} />
       <h1 className='city_title'>{city}</h1>
       <div className='box'>
         <div className='fit'>
@@ -38,6 +42,7 @@ const GraphContainer = ({ city }) => {
             city={city}
             fit={0}
           />
+          <p>*add directional comments*</p>
         </div>
       </div>
     </>

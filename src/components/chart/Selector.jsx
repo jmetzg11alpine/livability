@@ -1,10 +1,9 @@
 import Select from 'react-select'
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { csv } from 'd3'
-import raw_data from '../data/city_names_only.csv'
+import raw_data from '../../data/city_names_only.csv'
 
-const Selector = ({ setCity }) => {
-  const [options, setOptions] = useState([])
+const Selector = ({ setCity, options, setOptions }) => {
   useEffect(() => {
     csv(raw_data).then((data) => {
       const cities = []
@@ -20,7 +19,7 @@ const Selector = ({ setCity }) => {
       }
       setOptions(optionsBuilder)
     })
-  }, [])
+  }, [setOptions])
 
   const handleChange = (selectedOption) => {
     const city = selectedOption.value

@@ -1,5 +1,6 @@
 import * as d3 from 'd3'
 import { useEffect, useRef } from 'react'
+import getText from './getText'
 
 const formatData = (data) => {
   data = data[0]
@@ -23,12 +24,13 @@ const Graph = ({ category, data, cityInfo, city, fit }) => {
   let ReferenceD3 = city + category
   ReferenceD3 = useRef()
   const [mainColor, secondColor] = get_colors(fit)
+  const graphText = getText(category, city, fit)
 
   useEffect(() => {
     const xMinValue = Math.min(...data)
     const xMaxValue = Math.max(...data)
     const padding = (xMaxValue - xMinValue) * 0.08
-    const width = window.innerHeight * 0.4
+    const width = window.innerWidth * 0.35
     const height = window.innerHeight * 0.08
 
     const margin = { top: 10, right: 10, bottom: 20, left: 10 }
@@ -38,6 +40,7 @@ const Graph = ({ category, data, cityInfo, city, fit }) => {
       .attr('width', width + margin.left + margin.right)
       .attr('height', height + margin.top + margin.bottom)
       .append('g')
+
     const y = d3.scaleBand().range([height, 0]).domain(['']).padding(4)
     svg
       .append('g')
@@ -91,11 +94,37 @@ const Graph = ({ category, data, cityInfo, city, fit }) => {
       .attr('r', 8)
       .attr('opacity', 0.7)
       .attr('fill', mainColor)
-  }, [ReferenceD3, data, category, cityInfo, fit])
+    const tooldiv = d3
+      .select('#ReferenceD3')
+      .append('div')
+      .style('visibility', 'hidden')
+      .style('position', 'absolute')
+      .style('background-color', '#AAABBC')
+      .style('width', '200px')
+    svg
+      .on('mouseover', (e, d) => {
+        tooldiv
+          .style('visibility', 'visible')
+          .text(`${graphText}`)
+          .style('top', e.pageY - 50 + 'px')
+          .style('left', e.pageX + 50 + 'px')
+      })
+      .on('mouseout', () => {
+        tooldiv.style('visibility', 'hidden')
+      })
+  }, [
+    ReferenceD3,
+    data,
+    category,
+    cityInfo,
+    fit,
+    mainColor,
+    secondColor,
+    graphText,
+  ])
 
   return (
-    <div>
-      <p>fit: {fit}</p>
+    <div id='ReferenceD3'>
       <svg ref={ReferenceD3}></svg>
     </div>
   )
