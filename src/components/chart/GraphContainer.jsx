@@ -11,10 +11,14 @@ const GraphContainer = () => {
   let no_fit = null
   let cityInfo = null
   let data = null
+  let fit_direction = null
+  let no_fit_direction = null
 
   const bigObject = ChartPrepper(city)
   fit = bigObject[0].category
+  fit_direction = bigObject[0].direction
   no_fit = bigObject[1].category
+  no_fit_direction = bigObject[1].direction
   cityInfo = bigObject[2]
   data = bigObject[3]
 
@@ -31,6 +35,7 @@ const GraphContainer = () => {
             data={data}
             city={city}
             fit={1}
+            direction={fit_direction}
           />
         </div>
         <div className='no_fit'>
@@ -41,8 +46,8 @@ const GraphContainer = () => {
             data={data}
             city={city}
             fit={0}
+            direction={no_fit_direction}
           />
-          <p>*add directional comments*</p>
         </div>
       </div>
     </>

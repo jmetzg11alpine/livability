@@ -3,12 +3,13 @@ import Graph from './Graph'
 const get_cat_numbers = (cat, data) => {
   let numbers = []
   for (let i in data) {
-    numbers.push(data[i][cat])
+    let dataPoint = [data[i]['Name'], data[i][cat]]
+    numbers.push(dataPoint)
   }
   return numbers
 }
 
-const FitContainer = ({ categories, cityInfo, data, city, fit }) => {
+const FitContainer = ({ categories, cityInfo, data, city, fit, direction }) => {
   let category_data = []
   for (let i in categories) {
     let cat = categories[i]
@@ -30,6 +31,7 @@ const FitContainer = ({ categories, cityInfo, data, city, fit }) => {
               cityInfo={cityInfo}
               city={city}
               fit={fit}
+              direction={direction[i]}
             />
           </div>
         ))}

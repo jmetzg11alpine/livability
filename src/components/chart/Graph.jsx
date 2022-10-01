@@ -11,6 +11,26 @@ const formatData = (data) => {
   return new_data
 }
 
+const getMin = (data) => {
+  let _min = Number.POSITIVE_INFINITY
+  for (let i in data) {
+    if (+data[i][1] < _min) {
+      _min = +data[i][1]
+    }
+  }
+  return _min
+}
+
+const getMax = (data) => {
+  let _max = Number.NEGATIVE_INFINITY
+  for (let i in data) {
+    if (+data[i][1] > _max) {
+      _max = +data[i][1]
+    }
+  }
+  return _max
+}
+
 const get_colors = (fit) => {
   if (fit === 1) {
     return ['#3d348b', '#009fb7']
@@ -19,16 +39,17 @@ const get_colors = (fit) => {
   }
 }
 
-const Graph = ({ category, data, cityInfo, city, fit }) => {
+const Graph = ({ category, data, cityInfo, city, fit, direction }) => {
+  // console.log(category, direction)
   data = formatData(data)
   let ReferenceD3 = city + category
   ReferenceD3 = useRef()
   const [mainColor, secondColor] = get_colors(fit)
-  const graphText = getText(category, city, fit)
+  const graphText = getText(category, city, fit, direction)
 
   useEffect(() => {
-    const xMinValue = Math.min(...data)
-    const xMaxValue = Math.max(...data)
+    const xMinValue = getMin(data)
+    const xMaxValue = getMax(data)
     const padding = (xMaxValue - xMinValue) * 0.08
     const width = window.innerWidth * 0.35
     const height = window.innerHeight * 0.08
@@ -60,6 +81,17 @@ const Graph = ({ category, data, cityInfo, city, fit }) => {
       .select('.domain')
       .remove()
 
+    // all points
+    const toolpoint = d3
+      .select('#ReferenceD3')
+      .append('div')
+      .style('visibility', 'hidden')
+      .style('position', 'absolute')
+      .style('background-color', mainColor)
+      .style('color', 'white')
+      .style('width', '150px')
+      .style('padding', '2px')
+
     function getRandomArbitrary(min, max) {
       return Math.random() * (max - min) + min
     }
@@ -74,14 +106,35 @@ const Graph = ({ category, data, cityInfo, city, fit }) => {
       .enter()
       .append('circle')
       .attr('cx', function (d) {
-        return x(d)
+        return x(d[1])
       })
       .attr('cy', function (d) {
         return jitter(d)
       })
-      .attr('r', 2)
+      .attr('r', 3)
       .attr('opacity', 0.85)
       .attr('fill', secondColor)
+      .on('mouseover', (e, d) => {
+        toolpoint
+          .style('visibility', 'visible')
+          .text(d[0] + ': ' + d[1])
+          .style('top', e.pageY - 30 + 'px')
+          .style('left', e.pageX + 30 + 'px')
+      })
+      .on('mouseout', () => {
+        toolpoint.style('visibility', 'hidden')
+      })
+
+    // main point
+    const tooldiv = d3
+      .select('#ReferenceD3')
+      .append('div')
+      .style('visibility', 'hidden')
+      .style('position', 'absolute')
+      .style('background-color', secondColor)
+      .style('color', 'white')
+      .style('width', '200px')
+      .style('padding', '2px')
     svg
       .selectAll('point')
       .data([cityInfo[category]])
@@ -94,20 +147,12 @@ const Graph = ({ category, data, cityInfo, city, fit }) => {
       .attr('r', 8)
       .attr('opacity', 0.7)
       .attr('fill', mainColor)
-    const tooldiv = d3
-      .select('#ReferenceD3')
-      .append('div')
-      .style('visibility', 'hidden')
-      .style('position', 'absolute')
-      .style('background-color', '#AAABBC')
-      .style('width', '200px')
-    svg
       .on('mouseover', (e, d) => {
         tooldiv
           .style('visibility', 'visible')
           .text(`${graphText}`)
-          .style('top', e.pageY - 50 + 'px')
-          .style('left', e.pageX + 50 + 'px')
+          .style('top', e.pageY - 30 + 'px')
+          .style('left', e.pageX + 30 + 'px')
       })
       .on('mouseout', () => {
         tooldiv.style('visibility', 'hidden')

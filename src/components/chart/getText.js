@@ -2,7 +2,7 @@ const getFitText = (category, city) => {
   if (category === 'income') {
     return (
       city +
-      "'s wealth is nothin special. It's not a rich city like San Jose, but it's not poor like Detroit"
+      "'s wealth is nothing special. It's not a rich city like San Jose, but it's not poor like Detroit"
     )
   } else if (category === 'ufo') {
     return (
@@ -26,7 +26,7 @@ const getFitText = (category, city) => {
       "isn't a rat next like New York, and isn't a yuppie village like Arlington"
     )
   } else if (category === 'air') {
-    return 'Fresno has worse air than ' + city + 'Colorado Springs has better'
+    return 'Fresno has worse air than ' + city + ' Colorado Springs has better'
   } else if (category === 'parking') {
     return (
       'You can find quicker parking in Omaha, but ' +
@@ -43,33 +43,65 @@ const getFitText = (category, city) => {
   }
 }
 
-const getNoFitText = (category, city) => {
-  if (category === 'income') {
-    return city + "'s income levels stand out"
-  } else if (category === 'ufo') {
-    return 'Uncommon alien visitation in ' + city
-  } else if (category === 'temp') {
-    return 'Abnormal weather patterns in ' + city
-  } else if (category === 'crime') {
-    return 'Atypical crime rates in ' + city
-  } else if (category === 'population') {
-    return 'Unexpected populations size in ' + city
-  } else if (category === 'air') {
-    return 'Unconventional air quaility'
-  } else if (category === 'parking') {
-    return 'Peculiar amount of time to find a parking space'
-  } else if (category === 'size') {
-    return city + ' is an interesting size for an American city'
+const getNoFitText = (category, city, direction) => {
+  if (direction === 1) {
+    if (category === 'income') {
+      return 'The jerks in ' + city + ' should pay more taxes'
+    } else if (category === 'ufo') {
+      return 'Aliens like ' + city
+    } else if (category === 'temperature') {
+      return city + ' is really feeling global warming'
+    } else if (category === 'crime') {
+      return "Don't let your children play unsupervised in " + city
+    } else if (category === 'population') {
+      return (
+        'The school district of ' +
+        city +
+        ' needs to introduce a class on sex education'
+      )
+    } else if (category === 'air') {
+      return "It's healthier to smoke cigarettes than to live in " + city
+    } else if (category === 'parking') {
+      return 'Lots of time is spent trying to find parking in ' + city
+    } else if (category === 'size') {
+      return city + ' has lots of extra land for big Americans'
+    } else {
+      return city + ' has lots places to charge your electric car'
+    }
   } else {
-    return 'Curious amount of electric car stations in ' + city
+    if (category === 'income') {
+      return 'The poor citizens of' + city + ' struggle to pay bills'
+    } else if (category === 'ufo') {
+      return "Aliens don't like " + city
+    } else if (category === 'temperature') {
+      return city + ' can look forward to global warming'
+    } else if (category === 'crime') {
+      return "You don't have to lock your doors in " + city
+    } else if (category === 'population') {
+      return (
+        'The mayor of ' +
+        city +
+        ' should consider programs to encourage more romance'
+      )
+    } else if (category === 'air') {
+      return city + ' is a breath of fresh air'
+    } else if (category === 'parking') {
+      return 'Always good parking in ' + city
+    } else if (category === 'size') {
+      return 'Not much room to build houses in ' + city
+    } else {
+      return (
+        city + " doesn't support electric cars. Not many places to charge them"
+      )
+    }
   }
 }
 
-const getText = (category, city, fit) => {
+const getText = (category, city, fit, direction) => {
   if (fit === 1) {
     return getFitText(category, city)
   } else {
-    return getNoFitText(category, city)
+    return getNoFitText(category, city, direction)
   }
 }
 
