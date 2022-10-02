@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  text-align: center;
+  background: #009fb7;
+  color: white;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #3d348b;
+  color: white;
+  height: 40px;
+  font-size: 25px;
+}
+
+svg {
+  font-weight: 40;
+}
+
+.container {
+  margin: 4px 6px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 2vh 2vw;
+  padding: 1px;
+}
+
+.one-graph {
+  margin: 5px;
+}
+
+.city_title {
+  text-align: center;
+}

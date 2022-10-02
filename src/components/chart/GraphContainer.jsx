@@ -2,7 +2,6 @@ import { useState } from 'react'
 import ChartPrepper from '../chartPrepper/ChartPrepper'
 import FitContainer from './FitContainer'
 import Selector from './Selector'
-import './styles.css'
 
 const GraphContainer = () => {
   const [city, setCity] = useState('Phoenix')
@@ -23,7 +22,7 @@ const GraphContainer = () => {
   data = bigObject[3]
 
   return (
-    <>
+    <div className='container'>
       <Selector setCity={setCity} options={options} setOptions={setOptions} />
       <h1 className='city_title'>{city}</h1>
       <div className='box'>
@@ -50,7 +49,7 @@ const GraphContainer = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

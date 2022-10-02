@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Nav from './components/Nav'
 import DataFlow from './components/DataFlow'
 import NextSteps from './components/NextSteps'
+import './styles.css'
 
 const App = () => {
   return (
@@ -12,10 +13,7 @@ const App = () => {
         <Header />
         <Nav />
         <Routes>
-          <Route
-            path='/drivers_of_livability'
-            element={<GraphContainer />}
-          ></Route>
+          <Route path='/livability' element={<GraphContainer />}></Route>
           <Route path='/data_flow' element={<DataFlow />}></Route>
           <Route path='/next_steps' element={<NextSteps />}></Route>
         </Routes>
