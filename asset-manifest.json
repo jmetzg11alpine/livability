@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/livability/static/css/main.b232c7a5.css",
-    "main.js": "/livability/static/js/main.2a6b4c7c.js",
+    "main.css": "/livability/static/css/main.7201e8e8.css",
+    "main.js": "/livability/static/js/main.8a9a074c.js",
     "static/media/cities.csv": "/livability/static/media/cities.95c8f41852675db51612.csv",
     "index.html": "/livability/index.html",
     "static/media/city_names_only.csv": "/livability/static/media/city_names_only.2490ce402f703c4772c3.csv",
     "static/media/stats.csv": "/livability/static/media/stats.69bdcb96873f2f1ca081.csv",
-    "main.b232c7a5.css.map": "/livability/static/css/main.b232c7a5.css.map",
-    "main.2a6b4c7c.js.map": "/livability/static/js/main.2a6b4c7c.js.map"
+    "main.7201e8e8.css.map": "/livability/static/css/main.7201e8e8.css.map",
+    "main.8a9a074c.js.map": "/livability/static/js/main.8a9a074c.js.map"
   },
   "entrypoints": [
-    "static/css/main.b232c7a5.css",
-    "static/js/main.2a6b4c7c.js"
+    "static/css/main.7201e8e8.css",
+    "static/js/main.8a9a074c.js"
   ]
 }
