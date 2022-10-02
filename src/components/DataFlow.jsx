@@ -195,10 +195,10 @@ const DataFlow = () => {
       .attr('fill', '#aaabbc')
     svg
       .append('text')
-      .attr('x', width * 0.002)
-      .attr('y', height * 0.045)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.001)
+      .attr('y', height * 0.05 - height * 0.005)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('cities.csv')
 
     // stats.csv
@@ -212,10 +212,10 @@ const DataFlow = () => {
       .attr('fill', '#aaabbc')
     svg
       .append('text')
-      .attr('x', width * 0.022)
-      .attr('y', height * 0.165)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.03)
+      .attr('y', height * 0.17 - height * 0.005)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('stats.csv')
 
     // names.csv
@@ -229,42 +229,26 @@ const DataFlow = () => {
       .attr('fill', '#aaabbc')
     svg
       .append('text')
-      .attr('x', width * 0.125)
-      .attr('y', height * 0.06)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.135)
+      .attr('y', height * 0.065 - height * 0.005)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('names.csv')
-
-    // GraphContainer.jsx
-    svg
-      .append('circle')
-      .attr('cx', width * 0.5)
-      .attr('cy', height * 0.4)
-      .attr('r', 35)
-      .attr('stroke', 'black')
-      .attr('fill', '#3d348b')
-    svg
-      .append('text')
-      .attr('x', width * 0.43)
-      .attr('y', height * 0.35)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
-      .text('GraphContainer.jsx')
 
     // Selector.jsx
     svg
       .append('circle')
       .attr('cx', width * 0.42)
       .attr('cy', height * 0.27)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#3d348b')
     svg
       .append('text')
-      .attr('x', width * 0.38)
-      .attr('y', height * 0.22)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.42 - width * 0.03)
+      .attr('y', height * 0.27 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('Selector.jsx')
 
     // FitContainer.jsx
@@ -272,31 +256,47 @@ const DataFlow = () => {
       .append('circle')
       .attr('cx', width * 0.6)
       .attr('cy', height * 0.3)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#3d348b')
     svg
       .append('text')
-      .attr('x', width * 0.55)
-      .attr('y', height * 0.25)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.6 - width * 0.03)
+      .attr('y', height * 0.3 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('FitContainer.jsx')
+
+    // GraphContainer.jsx
+    svg
+      .append('circle')
+      .attr('cx', width * 0.5)
+      .attr('cy', height * 0.4)
+      .attr('r', width * 0.029)
+      .attr('stroke', 'black')
+      .attr('fill', '#3d348b')
+    svg
+      .append('text')
+      .attr('x', width * 0.5 - width * 0.03)
+      .attr('y', height * 0.4 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
+      .text('GraphContainer.jsx')
 
     // Graph.jsx
     svg
       .append('circle')
       .attr('cx', width * 0.72)
       .attr('cy', height * 0.2)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#3d348b')
     svg
       .append('text')
-      .attr('x', width * 0.69)
-      .attr('y', height * 0.15)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.72 - width * 0.03)
+      .attr('y', height * 0.2 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('Graph.jsx')
 
     // getText.js
@@ -304,15 +304,15 @@ const DataFlow = () => {
       .append('circle')
       .attr('cx', width * 0.84)
       .attr('cy', height * 0.14)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#3d348b')
     svg
       .append('text')
-      .attr('x', width * 0.81)
-      .attr('y', height * 0.09)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.84 - width * 0.03)
+      .attr('y', height * 0.14 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('getText.js')
 
     // ChartPrepper.js
@@ -320,15 +320,15 @@ const DataFlow = () => {
       .append('circle')
       .attr('cx', width * 0.25)
       .attr('cy', height * 0.6)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#ffb20f')
     svg
       .append('text')
-      .attr('x', width * 0.2)
-      .attr('y', height * 0.545)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.25 - width * 0.03)
+      .attr('y', height * 0.6 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('ChartPrepper.js')
 
     // LoadStats.jsx
@@ -336,15 +336,15 @@ const DataFlow = () => {
       .append('circle')
       .attr('cx', width * 0.14)
       .attr('cy', height * 0.5)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#ffb20f')
     svg
       .append('text')
-      .attr('x', width * 0.09)
-      .attr('y', height * 0.45)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.14 - width * 0.03)
+      .attr('y', height * 0.5 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('LoadStats.jsx')
 
     // LoadData.jsx
@@ -352,15 +352,15 @@ const DataFlow = () => {
       .append('circle')
       .attr('cx', width * 0.25)
       .attr('cy', height * 0.43)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#ffb20f')
     svg
       .append('text')
-      .attr('x', width * 0.2)
-      .attr('y', height * 0.38)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.25 - width * 0.03)
+      .attr('y', height * 0.43 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('LoadData.jsx')
 
     // FindCategories.js
@@ -368,15 +368,15 @@ const DataFlow = () => {
       .append('circle')
       .attr('cx', width * 0.12)
       .attr('cy', height * 0.68)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#ffb20f')
     svg
       .append('text')
-      .attr('x', width * 0.06)
-      .attr('y', height * 0.63)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.12 - width * 0.03)
+      .attr('y', height * 0.68 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('FindCategories.js')
 
     // Nav.jsx
@@ -384,15 +384,15 @@ const DataFlow = () => {
       .append('circle')
       .attr('cx', width * 0.58)
       .attr('cy', height * 0.65)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#ff4b3e')
     svg
       .append('text')
-      .attr('x', width * 0.55)
-      .attr('y', height * 0.6)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.58 - width * 0.03)
+      .attr('y', height * 0.65 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('Nav.jsx')
 
     // DataFlow.jsx
@@ -400,15 +400,15 @@ const DataFlow = () => {
       .append('circle')
       .attr('cx', width * 0.4)
       .attr('cy', height * 0.77)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#ff4b3e')
     svg
       .append('text')
-      .attr('x', width * 0.36)
-      .attr('y', height * 0.72)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.4 - width * 0.03)
+      .attr('y', height * 0.77 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('DataFlow.jsx')
 
     // NextSteps.jsx
@@ -416,15 +416,15 @@ const DataFlow = () => {
       .append('circle')
       .attr('cx', width * 0.58)
       .attr('cy', height * 0.85)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#ff4b3e')
     svg
       .append('text')
-      .attr('x', width * 0.53)
-      .attr('y', height * 0.8)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.58 - width * 0.03)
+      .attr('y', height * 0.85 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('NextSteps.jsx')
 
     // Header.jsx
@@ -432,15 +432,15 @@ const DataFlow = () => {
       .append('circle')
       .attr('cx', width * 0.74)
       .attr('cy', height * 0.75)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#ff4b3e')
     svg
       .append('text')
-      .attr('x', width * 0.7)
-      .attr('y', height * 0.7)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.74 - width * 0.03)
+      .attr('y', height * 0.75 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('Header.jsx')
 
     // styles.css
@@ -448,15 +448,15 @@ const DataFlow = () => {
       .append('circle')
       .attr('cx', width * 0.92)
       .attr('cy', height * 0.8)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#ff4b3e')
     svg
       .append('text')
-      .attr('x', width * 0.885)
-      .attr('y', height * 0.749)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.92 - width * 0.03)
+      .attr('y', height * 0.8 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('styles.css')
 
     // App.js
@@ -464,24 +464,24 @@ const DataFlow = () => {
       .append('circle')
       .attr('cx', width * 0.95)
       .attr('cy', height * 0.5)
-      .attr('r', 35)
+      .attr('r', width * 0.029)
       .attr('stroke', 'black')
       .attr('fill', '#009fb7')
     svg
       .append('text')
-      .attr('x', width * 0.93)
-      .attr('y', height * 0.449)
-      .attr('stroke', 'black')
-      .style('font-size', 15)
+      .attr('x', width * 0.95 - width * 0.03)
+      .attr('y', height * 0.5 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
       .text('App.js')
   }, [])
   return (
-    <div className='container svg'>
+    <div className='container'>
       <p>
         This application was built with React and D3. Considerable work was put
         in beforehand to prepare the data.
       </p>
-      <svg ref={myViz}></svg>
+      <svg className='svg' ref={myViz}></svg>
     </div>
   )
 }
