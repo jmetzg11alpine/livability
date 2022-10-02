@@ -4,7 +4,7 @@ const NextSteps = () => {
       <h4>Internshipt in Spanish!!</h4>
       <p>
         If there is nothing in the pipeline and other teammates can cover my
-        work, I would like to help include this into the product.
+        work, I would like to help include this logic into the product.
       </p>
       <p>I would consider it a great opportunity to build additional skills</p>
       <p>
