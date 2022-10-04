@@ -35,7 +35,7 @@ const getFitText = (category, city) => {
       city +
       ' is still quicker than New York'
     )
-  } else if (category === 'city') {
+  } else if (category === 'size') {
     return city + ' is bigger than Miami, but smaller than Jacksonville'
   } else {
     return (
