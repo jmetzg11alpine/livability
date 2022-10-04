@@ -2,6 +2,7 @@ import { useState } from 'react'
 import ChartPrepper from '../chartPrepper/ChartPrepper'
 import FitContainer from './FitContainer'
 import Selector from './Selector'
+import Glossary from '../Glossary'
 
 const GraphContainer = () => {
   const [city, setCity] = useState('Phoenix')
@@ -26,8 +27,8 @@ const GraphContainer = () => {
       <Selector setCity={setCity} options={options} setOptions={setOptions} />
       <h1 className='city_title'>{city}</h1>
       <div className='box'>
-        <div className='fit'>
-          <h4>Resembles other cities</h4>
+        <div className='fit_container'>
+          <h3 className='fit_title'>Resembles other cities</h3>
           <FitContainer
             categories={fit}
             cityInfo={cityInfo}
@@ -37,8 +38,8 @@ const GraphContainer = () => {
             direction={fit_direction}
           />
         </div>
-        <div className='no_fit'>
-          <h4>Doesn't resembles other cities</h4>
+        <div className='fit_container'>
+          <h3 className='fit_title'>Doesn't resembles other cities</h3>
           <FitContainer
             categories={no_fit}
             cityInfo={cityInfo}
@@ -49,6 +50,7 @@ const GraphContainer = () => {
           />
         </div>
       </div>
+      <Glossary />
     </div>
   )
 }

@@ -104,6 +104,16 @@ const DataFlow = () => {
       .attr('stroke', '#009fb7')
       .style('stroke-width', 3)
 
+    // GraphContainer.jsx to Glossary.jsx
+    svg
+      .append('line')
+      .attr('x1', width * 0.5)
+      .attr('y1', height * 0.4)
+      .attr('x2', width * 0.52)
+      .attr('y2', height * 0.17)
+      .attr('stroke', '#009fb7')
+      .style('stroke-width', 3)
+
     // FitContainer.jsx to Graph.jsx
     svg
       .append('line')
@@ -250,6 +260,22 @@ const DataFlow = () => {
       .attr('stroke', '')
       .style('font-size', width * 0.017)
       .text('Selector.jsx')
+
+    // Glossary.jsx
+    svg
+      .append('circle')
+      .attr('cx', width * 0.52)
+      .attr('cy', height * 0.17)
+      .attr('r', width * 0.029)
+      .attr('stroke', 'black')
+      .attr('fill', '#3d348b')
+    svg
+      .append('text')
+      .attr('x', width * 0.52 - width * 0.03)
+      .attr('y', height * 0.17 - height * 0.07)
+      .attr('stroke', '')
+      .style('font-size', width * 0.017)
+      .text('Glossary.jsx')
 
     // FitContainer.jsx
     svg

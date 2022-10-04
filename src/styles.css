@@ -37,6 +37,19 @@
   margin: 2vh 2vw;
   padding: 1px;
 }
+.fit_title {
+  text-align: center;
+  margin-bottom: 2vh;
+}
+.fit_container {
+  margin: 2vh 2vw;
+}
+.graph-container {
+  margin: 1.5vh 0;
+  border-radius: 0.8vw;
+  border: 1px solid #d3d3d3;
+  padding: 0.4vw;
+}
 
 .one-graph {
   margin: 5px;
@@ -44,4 +57,33 @@
 
 .city_title {
   text-align: center;
+}
+
+.graph-title {
+  font-size: 1.8vh;
+  display: flex;
+}
+
+.image {
+  height: 2vh;
+  width: 1.6vw;
+}
+
+.glossary-container {
+  margin-left: 1.5vw;
+}
+
+.Glossary {
+  margin-bottom: 1vh;
+}
+
+.row {
+  display: flex;
+}
+
+.cell-text {
+  font-size: 1.6vh;
+  width: 30vw;
+  margin-left: 2vw;
+  margin-bottom: 2vh;
 }

@@ -169,8 +169,10 @@ const Graph = ({ category, data, cityInfo, city, fit, direction }) => {
   ])
 
   return (
-    <div id='ReferenceD3'>
-      <svg ref={ReferenceD3}></svg>
+    <div className='graph_container_1'>
+      <div id='ReferenceD3'>
+        <svg ref={ReferenceD3}></svg>
+      </div>
     </div>
   )
 }
