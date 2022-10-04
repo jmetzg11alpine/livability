@@ -10,3 +10,11 @@ https://coolors.co/009fb7-3d348b-ff4b3e-ffb20f-aaabbc
 
 launching to git hub pages:
 https://www.youtube.com/watch?v=Q9n2mLqXFpU
+
+
+git add . 
+git commit -m "commit this"
+git push 
+
+
+npm run deploy

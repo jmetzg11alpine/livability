@@ -7,7 +7,7 @@ const Glossary = () => {
           <td>
             <img className='image' src={require('../data/air.png')} alt='' />
           </td>
-          <td className='cell-text'>air quality</td>
+          <td className='cell-text'>air pollution level</td>
           <td>
             <img className='image' src={require('../data/crime.png')} alt='' />
           </td>
