@@ -26,7 +26,9 @@ const getFitText = (category, city) => {
       " isn't a rat next like New York, and isn't a yuppie village like Arlington"
     )
   } else if (category === 'air') {
-    return 'Fresno has worse air than ' + city + ' Colorado Springs has better'
+    return (
+      'Fresno has worse air than ' + city + ' ,but Colorado Springs has better'
+    )
   } else if (category === 'parking') {
     return (
       'You can find quicker parking in Omaha, but ' +
