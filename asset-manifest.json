@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/livability/static/css/main.feefcb67.css",
+    "main.css": "/livability/static/css/main.fac79886.css",
     "main.js": "/livability/static/js/main.a6b454eb.js",
     "static/media/cities.csv": "/livability/static/media/cities.95c8f41852675db51612.csv",
     "index.html": "/livability/index.html",
     "static/media/city_names_only.csv": "/livability/static/media/city_names_only.2490ce402f703c4772c3.csv",
     "static/media/stats.csv": "/livability/static/media/stats.69bdcb96873f2f1ca081.csv",
-    "main.feefcb67.css.map": "/livability/static/css/main.feefcb67.css.map",
+    "main.fac79886.css.map": "/livability/static/css/main.fac79886.css.map",
     "main.a6b454eb.js.map": "/livability/static/js/main.a6b454eb.js.map"
   },
   "entrypoints": [
-    "static/css/main.feefcb67.css",
+    "static/css/main.fac79886.css",
     "static/js/main.a6b454eb.js"
   ]
 }
