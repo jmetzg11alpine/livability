@@ -57,6 +57,9 @@
 
 .city_title {
   text-align: center;
+  /* padding-top: 1vh; */
+  margin-top: 2.5vh;
+  margin-bottom: -1.5vh;
 }
 
 .graph-title {
